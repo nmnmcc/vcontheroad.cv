@@ -1,0 +1,11 @@
+@use '@ibm/plex-mono/scss' as PlexMono with (
+  $font-prefix: '@ibm/plex-mono'
+);
+
+@use '@ibm/plex-sans-sc/scss' as PlexSansSC with (
+  $font-prefix: '@ibm/plex-sans-sc'
+);
+
+@include PlexMono.all();
+
+@include PlexSansSC.all();

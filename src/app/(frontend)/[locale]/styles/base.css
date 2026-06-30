@@ -1,0 +1,46 @@
+html {
+  overflow-x: clip;
+  interpolate-size: allow-keywords;
+  font-size: max(16px, calc(100dvw / 120));
+  scrollbar-color: var(--color-accent) var(--color-background);
+}
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border: 0.2rem solid var(--color-background);
+  border-radius: 9999px;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'IBM Plex Mono', 'IBM Plex Sans SC', ui-monospace, monospace;
+  overflow-x: clip;
+  transition: background-color 300ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+article a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.08em;
+}
+
+article a::after {
+  content: '↗';
+  display: inline-block;
+  margin-inline-start: 0.15em;
+  text-decoration: none;
+}

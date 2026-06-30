@@ -1,0 +1,148 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "vcontheroad",
+  "compatibility_date": "2026-04-07",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true,
+    },
+  },
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "images": {
+    "binding": "IMAGES",
+  },
+  "d1_databases": [
+    {
+      "binding": "D1",
+      "database_id": "05b46d65-f0b4-493c-9883-acefd0546273",
+      "database_name": "vcontheroad",
+    },
+  ],
+  "kv_namespaces": [],
+  "r2_buckets": [
+    {
+      "binding": "R2",
+      "bucket_name": "vcontheroad",
+    },
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "vcontheroad-cache",
+    },
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "NEXT_CACHE_DO_QUEUE",
+        "class_name": "DOQueueHandler",
+      },
+      {
+        "name": "NEXT_TAG_CACHE_DO_SHARDED",
+        "class_name": "DOShardedTagCache",
+      },
+      {
+        "name": "NEXT_CACHE_DO_PURGE",
+        "class_name": "BucketCachePurge",
+      },
+    ],
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["DOQueueHandler", "DOShardedTagCache", "BucketCachePurge"],
+    },
+  ],
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "allowed_sender_addresses": ["noreply@vcontheroad.cv"],
+    },
+  ],
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "vcontheroad",
+    },
+  ],
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://vcontheroad.cv",
+  },
+  "secrets": {
+    "required": ["PAYLOAD_SECRET"],
+  },
+  "env": {
+    "production": {
+      "name": "vcontheroad",
+      "assets": {
+        "directory": ".open-next/assets",
+        "binding": "ASSETS",
+      },
+      "images": {
+        "binding": "IMAGES",
+      },
+      "d1_databases": [
+        {
+          "binding": "D1",
+          "database_id": "05b46d65-f0b4-493c-9883-acefd0546273",
+          "database_name": "vcontheroad",
+        },
+      ],
+      "kv_namespaces": [],
+      "r2_buckets": [
+        {
+          "binding": "R2",
+          "bucket_name": "vcontheroad",
+        },
+        {
+          "binding": "NEXT_INC_CACHE_R2_BUCKET",
+          "bucket_name": "vcontheroad-cache",
+        },
+      ],
+      "durable_objects": {
+        "bindings": [
+          {
+            "name": "NEXT_CACHE_DO_QUEUE",
+            "class_name": "DOQueueHandler",
+          },
+          {
+            "name": "NEXT_TAG_CACHE_DO_SHARDED",
+            "class_name": "DOShardedTagCache",
+          },
+          {
+            "name": "NEXT_CACHE_DO_PURGE",
+            "class_name": "BucketCachePurge",
+          },
+        ],
+      },
+      "migrations": [
+        {
+          "tag": "v1",
+          "new_sqlite_classes": ["DOQueueHandler", "DOShardedTagCache", "BucketCachePurge"],
+        },
+      ],
+      "send_email": [
+        {
+          "name": "EMAIL",
+          "allowed_sender_addresses": ["noreply@vcontheroad.cv"],
+        },
+      ],
+      "services": [
+        {
+          "binding": "WORKER_SELF_REFERENCE",
+          "service": "vcontheroad",
+        },
+      ],
+      "vars": {
+        "NEXT_PUBLIC_SITE_URL": "https://vcontheroad.cv",
+      },
+      "secrets": {
+        "required": ["PAYLOAD_SECRET"],
+      },
+    },
+  },
+}

@@ -1,0 +1,110 @@
+@utility grid-fit-w {
+  width: calc(
+    round(
+        down,
+        calc(100dvw - 2 * var(--spacing-inset) + var(--spacing-gutter)),
+        calc(var(--spacing-cell) + var(--spacing-gutter))
+      ) -
+      var(--spacing-gutter)
+  );
+}
+
+@utility grid-fit-h {
+  height: calc(
+    round(
+        down,
+        calc(100dvh - 2 * var(--spacing-inset) + var(--spacing-gutter)),
+        calc(var(--spacing-cell) + var(--spacing-gutter))
+      ) -
+      var(--spacing-gutter)
+  );
+}
+
+@utility grid-half-w {
+  width: calc(
+    round(
+        down,
+        calc((100% + var(--spacing-gutter)) / 2),
+        calc(var(--spacing-cell) + var(--spacing-gutter))
+      ) -
+      var(--spacing-gutter)
+  );
+}
+
+@utility grid-third-h {
+  height: calc(
+    round(
+        down,
+        calc((100cqw + var(--spacing-gutter)) / 3),
+        calc(var(--spacing-cell) + var(--spacing-gutter))
+      ) -
+      var(--spacing-gutter)
+  );
+}
+
+@utility grid-cells {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--spacing-cell));
+  grid-auto-rows: var(--spacing-cell);
+  gap: var(--spacing-gutter);
+}
+
+@utility grid-prose-w {
+  max-width: calc(9 * var(--spacing-cell) + 8 * var(--spacing-gutter));
+}
+
+@utility grid-title-w {
+  max-width: calc(12 * var(--spacing-cell) + 11 * var(--spacing-gutter));
+}
+
+@utility grid-snap-children {
+  & > * {
+    min-block-size: var(--spacing-cell);
+    min-block-size: calc-size(
+      auto,
+      round(up, size, calc(var(--spacing-cell) + var(--spacing-gutter))) - var(--spacing-gutter)
+    );
+  }
+}
+
+@utility grid-snap-w {
+  inline-size: calc-size(
+    fit-content,
+    round(up, size, calc(var(--spacing-cell) + var(--spacing-gutter))) - var(--spacing-gutter)
+  );
+}
+
+@utility grid-snap-deep {
+  & * {
+    min-block-size: var(--spacing-cell);
+    min-block-size: calc-size(
+      auto,
+      round(up, size, calc(var(--spacing-cell) + var(--spacing-gutter))) - var(--spacing-gutter)
+    );
+  }
+}
+
+@utility grid-figure {
+  flex: 0 1 calc(9 * var(--spacing-cell) + 8 * var(--spacing-gutter));
+  max-inline-size: calc(9 * var(--spacing-cell) + 8 * var(--spacing-gutter));
+  aspect-ratio: calc(
+    (9 * var(--spacing-cell) + 8 * var(--spacing-gutter)) /
+      (5 * var(--spacing-cell) + 4 * var(--spacing-gutter))
+  );
+  min-inline-size: 0;
+  min-block-size: 0;
+  object-fit: cover;
+}
+
+@utility grid-figcaption {
+  flex: 0 1 calc(3 * var(--spacing-cell) + 2 * var(--spacing-gutter));
+  max-inline-size: calc(3 * var(--spacing-cell) + 2 * var(--spacing-gutter));
+  align-self: stretch;
+  min-inline-size: 0;
+  min-block-size: 0;
+  min-block-size: calc-size(
+    auto,
+    round(up, size, calc(var(--spacing-cell) + var(--spacing-gutter))) - var(--spacing-gutter)
+  );
+}
+
