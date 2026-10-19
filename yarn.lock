@@ -3509,9 +3509,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opennextjs/aws@npm:4.0.2":
-  version: 4.0.2
-  resolution: "@opennextjs/aws@npm:4.0.2"
+"@opennextjs/aws@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@opennextjs/aws@npm:4.1.0"
   dependencies:
     "@ast-grep/napi": "npm:^0.40.5"
     "@aws-sdk/client-cloudfront": "npm:3.984.0"
@@ -3531,20 +3531,20 @@ __metadata:
     urlpattern-polyfill: "npm:^10.1.0"
     yaml: "npm:^2.8.1"
   peerDependencies:
-    next: ">=15.5.18 <16 || >=16.2.6"
+    next: ">=15.5.21 <16 || >=16.2.11"
   bin:
     open-next: dist/index.js
-  checksum: 10c0/d0b157429c42f6f2a82a92367af06cee58eae8752af645b9ae9ee5eabb173f02f5e324e0ee127894f002889d87cc878a17f019677974ee6c9a5fab8e77fe6fc3
+  checksum: 10c0/f290f27f7c9180ffd8d2448db83bb4464201f29bc2c82c006945b316b05a08b61055a373d7b4f4f126828d092bdd1962e5a72bd0f0da0c336c19744aa14ad4c1
   languageName: node
   linkType: hard
 
-"@opennextjs/cloudflare@npm:1.20.1":
-  version: 1.20.1
-  resolution: "@opennextjs/cloudflare@npm:1.20.1"
+"@opennextjs/cloudflare@npm:1.20.2":
+  version: 1.20.2
+  resolution: "@opennextjs/cloudflare@npm:1.20.2"
   dependencies:
     "@ast-grep/napi": "npm:^0.40.5"
     "@dotenvx/dotenvx": "npm:1.31.0"
-    "@opennextjs/aws": "npm:4.0.2"
+    "@opennextjs/aws": "npm:4.1.0"
     ci-info: "npm:^4.2.0"
     cloudflare: "npm:^4.4.1"
     comment-json: "npm:^4.5.1"
@@ -3553,7 +3553,7 @@ __metadata:
     ts-tqdm: "npm:^0.8.6"
     yargs: "npm:^18.0.0"
   peerDependencies:
-    next: ">=15.5.18 <16 || >=16.2.6"
+    next: ">=15.5.21 <16 || >=16.2.11"
     rclone.js: ^0.6.6
     wrangler: ^4.86.0
   peerDependenciesMeta:
@@ -3561,7 +3561,7 @@ __metadata:
       optional: true
   bin:
     opennextjs-cloudflare: dist/cli/index.js
-  checksum: 10c0/042ee7f4bfbeb269ad6e187a1403b3c5a93938f31a54628f778b763cdee2684b4bb0cc8955e657e1f3b94877e23ead2854fb6d636f7983ca6076a95e76aa5ade
+  checksum: 10c0/0526425d2a8abb6b81f625a74225ac5934c17f075dc8239dc0c123c48fcad55657010d530028530b82991f73a0570b859c34e5f30fc2d10ef3b8f88850777721
   languageName: node
   linkType: hard
 
@@ -12969,7 +12969,7 @@ __metadata:
     "@ibm/plex-sans-sc": "npm:^1.1.0"
     "@material/material-color-utilities": "npm:^0.4.0"
     "@nmnmcc/intee": "npm:^2.1.0"
-    "@opennextjs/cloudflare": "npm:1.20.1"
+    "@opennextjs/cloudflare": "npm:1.20.2"
     "@payloadcms/db-d1-sqlite": "npm:3.85.1"
     "@payloadcms/next": "npm:3.85.1"
     "@payloadcms/plugin-seo": "npm:3.85.1"
