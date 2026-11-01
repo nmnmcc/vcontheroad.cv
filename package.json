@@ -57,7 +57,7 @@
     "@ibm/plex-sans-sc": "^1.1.0",
     "@material/material-color-utilities": "^0.4.0",
     "@nmnmcc/intee": "^2.1.0",
-    "@opennextjs/cloudflare": "1.20.1",
+    "@opennextjs/cloudflare": "1.20.2",
     "@payloadcms/db-d1-sqlite": "3.85.1",
     "@payloadcms/next": "3.85.1",
     "@payloadcms/plugin-seo": "3.85.1",
